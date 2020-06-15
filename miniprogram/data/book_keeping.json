@@ -1,0 +1,56 @@
+{
+  "icon_url":"cloud://textchange-8wsxr.7465-textchange-8wsxr-1300448914/typelcons/a1.png",
+  "title":"餐饮",
+  "type":"canyin"
+}
+
+{
+  "icon_url": "cloud://textchange-8wsxr.7465-textchange-8wsxr-1300448914/typelcons/a2.png",
+  "title": "购物",
+  "type": "gouwu"
+}
+
+{
+  "icon_url": "cloud://textchange-8wsxr.7465-textchange-8wsxr-1300448914/typelcons/a3.png",
+  "title": "出行",
+  "type": "chuxing"
+}
+{
+  "icon_url": "cloud://textchange-8wsxr.7465-textchange-8wsxr-1300448914/typelcons/a4.png",
+  "title": "健康",
+  "type": "jiankang"
+}
+{
+  "icon_url": "cloud://textchange-8wsxr.7465-textchange-8wsxr-1300448914/typelcons/a5.png",
+  "title": "娱乐",
+  "type": "yule"
+}
+
+{
+  "icon_url": "cloud://textchange-8wsxr.7465-textchange-8wsxr-1300448914/typelcons/a6.png",
+  "title": "住房",
+  "type": "zhufang"
+}
+
+{
+  "icon_url": "cloud://textchange-8wsxr.7465-textchange-8wsxr-1300448914/typelcons/a7.png",
+  "title": "人情",
+  "type": "renqing"
+}
+
+{
+  "icon_url": "cloud://textchange-8wsxr.7465-textchange-8wsxr-1300448914/typelcons/a8.png",
+  "title": "美容",
+  "type": "meirong"
+}
+
+{
+  "icon_url": "cloud://textchange-8wsxr.7465-textchange-8wsxr-1300448914/typelcons/a9.png",
+  "title": "学习",
+  "type": "xuexi"
+}
+{
+  "icon_url": "cloud://textchange-8wsxr.7465-textchange-8wsxr-1300448914/typelcons/a10.png",
+  "title": "其他",
+  "type": "qita"
+}

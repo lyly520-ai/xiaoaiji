@@ -1,0 +1,90 @@
+<view class="chart">
+
+    <view class="nav">
+
+      <view class="year" bindtap="selectDate" data-key="isYear">
+        <view class="chart-box chart-box-year">
+          <view class="y">{{currentSelectYear}}年</view>
+          <view class="arrow">
+            <image class="auto-img arrow-img" src="../../images/bottom-arrow.png" mode="widthFix"></image>
+          </view>
+        </view>
+        <!-- 年份列表 -->
+        <view class="year-list date-day {{dateList.isYear ? 'show' : ''}}">
+          <view class="year-item {{item.isSelected ? 'selected' : ''}}" wx:for="{{yearData}}" wx:key="index" data-selected="{{item.isSelected}}" data-index="{{index}}" catchtap="selectYear">{{item.title}}年</view>
+        </view>
+
+      </view>
+
+      <!-- 月份列表 -->
+      <view class="month">
+        <view class="month-items clearfix" style="width: {{width * monthData.length + 'rpx'}};">
+          <view class="month-item {{item.isSelected ? 'month-show' : ''}}" wx:for="{{monthData}}" wx:key="index" data-selected="{{item.isSelected}}" data-index="{{index}}" bindtap="selectMonth">{{item.title}}月</view>
+        </view>
+      </view>
+
+      <!-- 日列表 -->
+      <view class="date" bindtap="selectDate" data-key="isDay">
+        <view class="chart-box chart-box-day">
+          <view class="line"></view>
+          <view class="text">筛选</view>
+          <view class="icon">
+            <image class="auto-img arrow-icon" src="../../images/filter.png" mode="widthFix"></image>
+          </view>
+        </view>
+        <view class="day date-day {{dateList.isDay ? 'show' : ''}}">
+          <view class="day-item {{item.isSelected ? 'selected' : ''}}" wx:for="{{dayData}}" wx:key="index" data-selected="{{item.isSelected}}" data-index="{{index}}" catchtap="selectDay">{{item.title}}日</view>
+        </view>
+      </view>
+    
+    </view>
+
+  <view class="title">
+    <view class="title-item" wx:for="{{tabData}}" wx:key="index">
+      <view class="title-item-content {{item.isActive ? item.className : ''}}" bindtap="toggleTab" data-active="{{item.isActive}}" data-index="{{index}}">
+        <view class="title-text">{{item.title}}</view>
+        <view class="title-money {{item.cls}}">{{item.money}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="box" hidden="{{!isHasData}}">
+
+    <!-- 图表容器 -->
+    <view class="canvas-box">
+      <canvas class="canvas" canvas-id="pieCanvas"></canvas>
+    </view>
+
+    <!-- 分类统计 -->
+    <view class="type-box">
+
+      <view class="type-item clearfix" wx:for="{{typeDatas}}" wx:key="index" data-ids="{{item.ids}}" data-name="{{item.name}}" bindtap="selectCurrentTypeData">
+
+        <view class="type-icon fl">
+          <image class="auto-img type-img" src="{{item.icon}}" mode="widthFix"></image>
+        </view>
+
+        <view class="type-title fl">
+          <view class="ty-title">
+            <view class="ty-title fl">{{item.name}}</view>
+            <view class="fr ty-total {{item.costType == 'shouru' ? 'ty-total-add' : 'ty-total-reduce'}}">￥{{item.total}}</view>
+          </view>
+          <view>
+            <view class="ty-progress fl">
+              <view class="ty-active-progress" style="background-color: {{item.color}}; width: {{item.width + 'px'}};"></view>
+            </view>
+            <view class="ty-count fl">{{item.count}}笔</view>
+          </view>
+        </view>
+
+        <view class="fl ty-arrow">
+          <image class="auto-img arrow-img" src="../../images/right-arrow.png" mode="widthFix"></image>
+        </view>
+
+      </view>
+
+    </view>
+
+  </view>
+
+</view>

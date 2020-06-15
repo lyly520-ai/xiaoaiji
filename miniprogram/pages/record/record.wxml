@@ -1,0 +1,76 @@
+<view class="record">
+  <view class="header"></view>
+  <view class="content">
+  
+    <view class="types">
+
+      <view class="types-title clearfix">
+        <view class="fl title-item {{item.isActive ? 'active' : ''}}" wx:for="{{tabData}}" wx:key="index" bindtap="toggleTab" data-active="{{item.isActive}}" data-index="{{index}}" data-datas="tabData">{{item.title}}</view>
+      </view>
+
+      <view class="banner">
+        <swiper class="wechat-swiper">
+          <block>
+            <swiper-item>
+              <view class="swiper-item">
+
+                <view class="item-icon {{item.selected ? 'active' : ''}}" wx:for="{{bookKeepingData}}" wx:key="index" data-id="{{item._id}}" data-index="{{index}}" data-selected="{{item.selected}}" bindtap="selectBookKeepingType">
+                  <view class="icon-text">
+                    <view class="icon">
+                      <image class="auto-img icon-img" src="{{item.icon_url}}" mode="widthFix"></image>
+                    </view>
+                    <view class="text">{{item.title}}</view>
+                  </view>
+                </view>
+
+              </view>
+            </swiper-item>
+
+          </block>
+        </swiper>
+      </view>
+    
+    </view>
+
+    <!-- account -->
+    <view class="account">
+      <view class="account-title">账户选择</view>
+      <view class="account-tab">
+        <view class="tab-item" wx:for="{{accountData}}" wx:key="index">
+          <view class="tab {{item.isActive ? 'active' : ''}}" data-active="{{item.isActive}}" data-index="{{index}}" data-datas="accountData" bindtap="toggleTab">{{item.title}}</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="info">
+      <view class="info-box">
+        <picker class="date-p" mode="date" start="{{dateRange.start}}" end="{{dateRange.end}}" bindchange="getInfo" data-title="date">
+          <view class="date-box">
+            <view class="date-title">日期</view>
+            <view class="record-date">{{info.date}}</view>
+          </view>
+        </picker>
+      </view>
+      <view class="info-box">
+        <view class="info-title">金额</view>
+        <view class="info-input">
+          <input class="weui-input" placeholder="输入记账金额" type="digit" confirm-type="done" maxlength="20" data-title="money" bindchange="getInfo" />
+        </view>
+      </view>
+      <view class="info-box">
+        <view class="info-title">备注</view>
+        <view class="info-input">
+           <input class="weui-input" placeholder="输入备注内容" type="text" confirm-type="done" maxlength="30" data-title="comment" bindchange="getInfo" />
+        </view>
+      </view>
+    </view>
+
+
+    <view class="save-box">
+      <view class="save" bindtap="bookKeeping">保存</view>
+      <button wx:if="{{!isAuth}}" class="open-btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
+    </view>
+
+  </view>
+
+</view>

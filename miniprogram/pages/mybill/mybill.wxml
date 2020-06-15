@@ -1,0 +1,28 @@
+<view class="mybill">
+  <view class="items">
+
+    <view class="item clearfix" wx:for="{{mybillDatas}}" wx:key="index">
+      <view class="fl item-icon">
+        <image class="auto-img img" src="{{item.icon}}" mode="widthFix"></image>
+      </view>
+      <view class="fl item-content">
+        <view class="fl">
+          <view class="clearfix">
+            <view class="fl item-title {{item.comment == '' ? 'active' : ''}}">{{item.title}}</view>
+            <view class="fl date {{item.comment == '' ? 'active' : ''}}">{{item.date}}</view>
+          </view>
+          <view class="comment" wx:if="{{item.comment != ''}}">{{item.comment}}</view>
+        </view>
+        <view class="fr clearfix">
+          <view class="money fl {{item.costType == 'zhichu' ? 'reduce' : 'add'}}">{{item.costType == 'zhichu' ? '-' : '+'}}￥{{item.money}}
+          </view>
+          <view class="delete fl" data-id="{{item._id}}" data-index="{{index}}" bindtap="deleteBill">
+            <image class="auto-img delete-img " src="../../images/delete.png " mode="widthFix "></image>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+</view>

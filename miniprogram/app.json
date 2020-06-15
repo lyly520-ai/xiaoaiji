@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/my/my",
+    "pages/record/record",
+    "pages/chart/chart",
+    "pages/type/type",
+    "pages/mybill/mybill"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#12acf2",
+    "navigationBarTitleText": "小Ai记",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#8f8f8f",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "./images/home.png",
+        "selectedIconPath": "./images/home_active.png"
+      },
+      {
+        "pagePath": "pages/record/record",
+        "text": "记账",
+        "iconPath": "./images/record.png",
+        "selectedIconPath": "./images/record_active.png"
+      },
+      {
+        "pagePath": "pages/chart/chart",
+        "text": "图表",
+        "iconPath": "./images/chart.png",
+        "selectedIconPath": "./images/chart_active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "./images/my.png",
+        "selectedIconPath": "./images/my_active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

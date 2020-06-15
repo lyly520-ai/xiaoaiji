@@ -1,0 +1,212 @@
+.header{
+  height: 160rpx;
+  background-color: #03a7ef;
+}
+
+.content{
+  margin-top: -100rpx;
+  padding: 0 20rpx;
+}
+
+.types{
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding-top: 40rpx;
+}
+
+.types-title{
+  width: 280rpx;
+  margin: 0 auto;
+  border: 2rpx solid #03a7ef;
+  border-radius: 30rpx;
+  overflow: hidden;
+}
+
+.title-item{
+  width: 140rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 28rpx;
+}
+
+.title-item.active{
+  background-color: #03a7ef;
+  color: #ffffff;
+}
+
+.wechat-swiper{
+  height: 424rpx;
+}
+
+.swiper-item{
+  height: 424rpx;
+  padding-bottom: 80rpx;
+}
+
+.item-icon{
+  width: 20%;
+  float: left;
+  margin-top: 80rpx;
+}
+
+.icon-text{
+  width: 70rpx;
+  margin: 0 auto;
+  transition: transform .1s;
+}
+
+.item-icon.active .icon-text{
+  transform: scale(1.15);
+}
+
+.icon-img{
+  height: 70rpx;
+  width: 70rpx;
+  transition: transform .1s;
+}
+
+.item-icon.active .icon-img{
+  transform: scale(1.15);
+}
+
+.icon{
+  background-color: #f5f5f5;
+}
+
+.text{
+  font-size: 24rpx;
+  text-align: center;
+  height: 32rpx;
+  line-height: 32rpx;
+  color: #6A6A6A;
+  margin-top: 10rpx;
+}
+
+.account{
+  margin-top: 20rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 20rpx;
+}
+
+.account-title{
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #e8e8e8;
+}
+
+.account-tab{
+  display: flex;
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+}
+
+.tab-item{
+  width: 20%;
+}
+
+.tab{
+  width: 100rpx;
+  height: 48rpx;
+  background-color: #f5f5f5;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 48rpx;
+  font-size: 22rpx;
+  color: #6A6A6A;
+  border-radius: 24rpx;
+}
+
+.tab.active{
+  background-color: #03a7ef;
+  color: #fff;
+}
+
+.info{
+  background-color: #fff;
+  margin-top: 20rpx;
+  border-radius: 20rpx;
+  padding: 20rpx;
+}
+
+.info-box{
+  display: flex;
+}
+
+.date-title{
+  width: 80rpx;
+  font-size: 28rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #444;
+}
+
+.date-p{
+  height: 60rpx;
+  width: 100%;
+  
+}
+
+.record-date{
+  color:#6A6A6A;
+  font-size: 28rpx;
+  margin-left: 40rpx;
+  line-height: 60rpx;
+}
+
+.date-box{
+  display: flex;
+}
+
+.info-title{
+  width: 80rpx;
+  font-size: 28rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #444;
+}
+
+.info-input{
+  width: calc(100% - 160rpx);
+  margin-left: 40rpx;
+}
+
+.weui-input{
+  height: 60rpx;
+  width: 100%;
+  font-size: 28rpx;
+  color: #444;
+  line-height: 60rpx;
+}
+
+.save{
+  height: 80rpx;
+  background-color: #03a7ef;
+  text-align: center;
+  line-height: 80rpx;
+  margin-top: 60rpx;
+  margin-bottom: 60rpx;
+  border-radius: 20rpx;
+  font-size: 32rpx;
+}
+
+.save-box{
+  position: relative;
+}
+
+.open-btn{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 0;
+  height: 80rpx;
+  width: 100%;
+  opacity: 0;
+}
+
+button:not([size='mini']){
+  width: 100%;
+}

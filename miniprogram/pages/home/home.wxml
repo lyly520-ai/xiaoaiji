@@ -1,0 +1,65 @@
+<view class="home">
+
+  <view class="header">
+
+    <view class="top">
+      <view class="top-title">本月结余</view>
+      <view class="top-total">
+        {{costMonth.jieyu}}.<text class="decimal">{{costMonth.jieyuDecimal}}</text>
+      </view>
+    </view>
+
+    <view class="bottom">
+      <view class="item-bottom clearfix">
+        <view class="clearfix">
+          <view class="fl bottom-title">本月收入</view>
+          <view class="fl bottom-total">{{costMonth.shouru}}</view>
+        </view>
+      </view>
+      <view class="line"></view>
+      <view class="item-bottom clearfix">
+        <view class="fr clearfix">
+          <view class="fl bottom-title">本月支出</view>
+          <view class="fl bottom-total">{{costMonth.zhichu}}</view>
+        </view>
+      </view>
+    </view>
+  
+  </view>
+  <view class="content">
+
+    <view class="date-title clearfix">
+      <view class="fl clearfix">
+        <view class="fl date-item">{{currentDate}}</view>
+        <view class="fl date-item" hidden="{{!isToday}}">今天</view>
+        <view class="fl date-item">收入：{{cost.shouru}}</view>
+        <view class="fl">支出：{{cost.zhichu}}</view>
+      </view>
+      <view class="fr more clearfix">
+        <picker class="wechat-picker" mode="date" start="{{dateRange.start}}" end="{{dateRange.end}}" bindchange="selectDate">选择日期</picker>
+        <view class="fl circle"></view>
+        <view class="fl circle"></view>
+        <view class="fl circle"></view>
+      </view>
+    </view>
+
+    <view class="items">
+
+      <view class="item clearfix" wx:for="{{bookKeepingData}}" wx:key="index">
+        <view class="fl item-icon">
+          <image class="auto-img img" src="{{item.icon}}" mode="widthFix"></image>
+        </view>
+        <view class="fl item-content">
+          <view class="fl">
+            <view class="item-title {{item.comment == '' ? 'active' : ''}}">{{item.title}}</view>
+            <view class="comment" wx:if="{{item.comment != ''}}">{{item.comment}}</view>
+          </view>
+          <view class="fr money {{item.costType == 'zhichu' ? 'reduce' : 'add'}}">{{item.costType == 'zhichu' ? '-' : '+'}}￥{{item.money}}</view>
+        </view>
+      </view>
+
+    </view>
+  
+  </view>
+
+</view>

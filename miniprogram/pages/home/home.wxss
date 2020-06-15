@@ -1,0 +1,159 @@
+.header{
+  padding: 40rpx 60rpx;
+  background-image: linear-gradient(to right, #12acf2, #55c5f7);
+  position: sticky;
+  top: 0;
+}
+
+.top{
+  height: 130rpx;
+}
+
+.bottom{
+  height: 50rpx;
+  display: flex;
+  position: relative
+}
+
+.top-title{
+  font-size: 28rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #ffffff;
+}
+.top-total{
+  font-size: 48rpx;
+  height: 90rpx;
+  color: #fff;
+  font-weight: bold;
+}
+
+.item-bottom{
+  width: 50%;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+
+.bottom-title{
+  font-size: 22rpx;
+  color: white;
+  margin-right: 20rpx;
+}
+
+.bottom-total{
+  color: white;
+  font-size: 28rpx;
+}
+
+.line{
+  width: 1px;
+  height: 28rpx;
+  background-color: #bcbcbc;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.decimal{
+  font-size: 32rpx;
+}
+
+.content{
+  background-color: #fff;
+  padding: 0 20rpx 20rpx;
+}
+
+.date-title{
+  color: #747474;
+  font-size: 24rpx;
+  position: sticky;
+  top: 260rpx;
+  background-color: #fff;
+  padding: 20rpx 0;
+}
+
+.date-item{
+  margin-right: 20rpx;
+}
+
+.more{
+  width: 54rpx;
+  margin-top: 12rpx;
+  position: relative;
+}
+
+.wechat-picker{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0;
+}
+
+.circle{
+  width: 8rpx;
+  height: 8rpx;
+  border-radius: 50%;
+  background-color: #757575;
+  margin: 0 5rpx;
+  position: relative;
+  z-index: 1;
+}
+
+.item{
+  padding: 20rpx 0 0;
+}
+
+.item-icon{
+  width: 70rpx;
+  height: 70rpx;
+  background-color: #747474;
+}
+
+.items{
+  margin-top: 20rpx;
+}
+
+.img{
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.item-content{
+  width: calc(100% - 110rpx);
+  padding: 0 20rpx 20rpx;
+  border-bottom: 1rpx solid #e8e8e8;
+}
+
+.item-title{
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.item-title.active{
+  line-height: 70rpx;
+}
+
+.comment{
+   font-size: 24rpx;
+   color: #747474;
+}
+
+.money{
+  line-height: 70rpx;
+  font-weight: bold;
+  font-size: 28rpx;
+}
+
+.money.add{
+  color:#00a0ea;
+}
+
+.money.reduce{
+  color: #FD553B;
+}

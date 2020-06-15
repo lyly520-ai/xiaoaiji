@@ -1,0 +1,22 @@
+/* 预设样式 */
+page{
+  background-color: #f7f7f7;
+}
+.fl{
+  float: left;
+}
+
+.fr{
+  float: right;
+}
+
+.clearfix::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.auto-img{
+  width: 100%;
+  display: block;
+}
